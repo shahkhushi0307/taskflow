@@ -69,9 +69,9 @@ export default function Hero() {
             Task <span className="text-teal-200">Flow</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-pretty text-lg text-teal-50 sm:text-xl/relaxed lg:text-xl">
-            Stay organised. Get things done. Create, track, and complete your
-            tasks — all saved automatically in your browser.
+            <p className="mt-5 max-w-xl text-pretty text-lg text-teal-50 sm:text-xl/relaxed lg:text-xl">
+            Take control of your day with a smarter way to organize, track,
+            and complete every task that matters.
           </p>
 
           <div className="mt-10 flex flex-col justify-center gap-3 sm:mt-12 sm:flex-row">
