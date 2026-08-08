@@ -15,9 +15,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
+    environment: github-pages
     steps:
       - uses: actions/checkout@v4
 
@@ -35,19 +35,13 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /taskflow
 
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          publish_dir: ./out
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out/
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment: github-pages
-
-    steps:
-      - name: Download Pages artifact
-        uses: actions/download-pages-artifact@v3
         with:
           path: ./out
 
